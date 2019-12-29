@@ -3,7 +3,7 @@ package main;
 public class Main {
 
     private static String type = "A";
-    private static String question = "1002";
+    private static String question = "1003";
 
     public static void main(String[] args)
     {
