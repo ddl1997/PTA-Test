@@ -1,3 +1,6 @@
 .idea/
 PTA-Test.iml
 out/
+.vs
+DeBug
+*.opendb
