@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Advanced">
+      <UniqueIdentifier>{8806cd06-4807-4c36-b925-a2c2b0c7350f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -27,7 +30,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="A1003.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="A1004.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1005.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1006.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1007.cpp">
+      <Filter>源文件\Advanced</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
