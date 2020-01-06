@@ -47,5 +47,14 @@
     <ClCompile Include="A1007.cpp">
       <Filter>源文件\Advanced</Filter>
     </ClCompile>
+    <ClCompile Include="A1008.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1009.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1010.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
