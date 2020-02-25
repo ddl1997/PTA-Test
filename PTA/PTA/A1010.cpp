@@ -80,3 +80,42 @@ int main()
 //24/25 10没通过
 //注意radix范围题目没有进行限制，只是限制了每一位digit的大小
 //在计算未知基数的10进制时注意结果溢出
+/*
+#include<bits/stdc++.h>
+using namespace std;
+long long convert(string n,long long r)//转换为十进制
+{
+	long long sum=0;
+	int index=0,temp=0;
+	for(auto it=n.rbegin();it!=n.rend();it++)
+	{
+		temp=isdigit(*it)?*it-'0':*it-'a'+10;
+		sum+=temp*pow(r,index++);
+	}
+	return sum;
+}
+long long find_r(string n,long long num)//找到令两个数相同的进制数
+{
+	char it=*max_element(n.begin(),n.end());
+	long long low=(isdigit(it)?it-'0':it-'a'+10)+1;
+	long long high=max(num,low);
+	while(low<=high){
+		long long mid=(low+high)/2;
+		long long t=convert(n,mid);
+		if(t<0||t>num)high=mid-1;
+		else if(t==num)return mid;
+		else low=mid+1;
+	}
+	return -1;
+}
+int main()
+{
+	string n1,n2;
+	long long tag=0,r=0,rr;
+	cin>>n1>>n2>>tag>>r;
+	rr=tag==1?find_r(n2,convert(n1,r)):find_r(n1,convert(n2,r));
+	if(rr!=-1)cout<<rr;
+	else cout<<"Impossible";
+	return 0;
+}
+*/

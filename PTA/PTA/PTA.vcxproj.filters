@@ -19,6 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="未通过.txt">
+      <Filter>源文件\Advanced</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -54,6 +57,27 @@
       <Filter>源文件\Advanced</Filter>
     </ClCompile>
     <ClCompile Include="A1010.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1011.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1012.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1013.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1014.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1015.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1016.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1017.cpp">
       <Filter>源文件\Advanced</Filter>
     </ClCompile>
   </ItemGroup>
