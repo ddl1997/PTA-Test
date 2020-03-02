@@ -80,5 +80,26 @@
     <ClCompile Include="A1017.cpp">
       <Filter>源文件\Advanced</Filter>
     </ClCompile>
+    <ClCompile Include="A1018.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1019.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1020.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1018%282%29.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1021.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1022.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1023.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
