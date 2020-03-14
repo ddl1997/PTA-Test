@@ -101,5 +101,14 @@
     <ClCompile Include="A1023.cpp">
       <Filter>源文件\Advanced</Filter>
     </ClCompile>
+    <ClCompile Include="A1024.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1025.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="A1026.cpp">
+      <Filter>源文件\Advanced</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
