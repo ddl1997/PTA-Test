@@ -16,10 +16,22 @@
     <Filter Include="源文件\Advanced">
       <UniqueIdentifier>{8806cd06-4807-4c36-b925-a2c2b0c7350f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Advanced\1-30">
+      <UniqueIdentifier>{d9132855-5052-4e77-af53-af1da066279f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Advanced\31-60">
+      <UniqueIdentifier>{63b0fb77-4f6a-400e-913b-29983fdaaeb8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
     <Text Include="未通过.txt">
+      <Filter>源文件\Advanced</Filter>
+    </Text>
+    <Text Include="笔记.txt">
+      <Filter>源文件\Advanced</Filter>
+    </Text>
+    <Text Include="算法和数据结构实例.txt">
       <Filter>源文件\Advanced</Filter>
     </Text>
   </ItemGroup>
@@ -32,83 +44,119 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="A1003.cpp">
-      <Filter>源文件\Advanced</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="A1003.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1030.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
     <ClCompile Include="A1004.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1005.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1006.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1007.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1008.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1009.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1010.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1011.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1012.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1013.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1014.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1015.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1016.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1017.cpp">
-      <Filter>源文件\Advanced</Filter>
-    </ClCompile>
-    <ClCompile Include="A1018.cpp">
-      <Filter>源文件\Advanced</Filter>
-    </ClCompile>
-    <ClCompile Include="A1019.cpp">
-      <Filter>源文件\Advanced</Filter>
-    </ClCompile>
-    <ClCompile Include="A1020.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1018%282%29.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1018.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1019.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1020.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1021.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1022.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1023.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1024.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1025.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
     </ClCompile>
     <ClCompile Include="A1026.cpp">
-      <Filter>源文件\Advanced</Filter>
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1027.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1028.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1029.cpp">
+      <Filter>源文件\Advanced\1-30</Filter>
+    </ClCompile>
+    <ClCompile Include="A1031.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1032.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1033.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1034.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1035.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1036.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1037.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1038.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

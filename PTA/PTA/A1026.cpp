@@ -11,43 +11,67 @@ struct Table {
 };
 
 struct Player {
-	int atime, stime = -1, p;
-	Player(int at, int _p)
+	int atime, stime = -1, cost;
+	bool vip;
+	Player(int at, int c, bool v)
 	{
-		atime = at; p = _p;
+		atime = at; cost = c; vip = v;
 	}
 };
 
+int n, k, m, pcount = 0;
 Table tables[K];
 vector<Player> players;
 vector<Player> vplayers;
-int pos = 0, vpos = 0;
+bool isServed[N];
 
 bool cmp(Player a, Player b)
 {
 	return a.atime < b.atime;
 }
 
+bool cmp_s(Player a, Player b)
+{
+	return a.stime < b.stime;
+}
+
+int findPos(int pos, int minI, int minT)
+{
+	int index = pos, vipI = -1;
+	bool hasVip = false;
+	if (tables[minI].isVip && players[pos].atime < minT)
+	{
+		for (int i = pos; i < pcount; i++)
+		{
+			if (!hasVip && !isServed[i] && players[i].vip && players[i].atime <= minT)
+			{
+				hasVip = true;
+				vipI = i;
+				break;
+			}
+		}
+		
+		index = hasVip ? vipI : pos;
+	}
+	return index;
+}
+
 int main()
 {
-	int n, k, m;
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
 		int hour, minute, second, p, type;
 		scanf("%d:%d:%d %d %d", &hour, &minute, &second, &p, &type);
-		Player player(hour * 3600 + minute * 60 + second, p * 60);
-		if (type == 1)
-			vplayers.push_back(player);
-		else
+		if (hour * 3600 + minute * 60 + second < 21 * 3600)
+		{
+			if (p > 120) p = 120; //最多2小时
+			Player player(hour * 3600 + minute * 60 + second, p * 60, type);
 			players.push_back(player);
+			isServed[pcount++] = false;
+		}
 	}
-	sort(vplayers.begin(), vplayers.end(), cmp);
-	/*for (int i = 0; i < players.size(); i++)
-		cout << players[i].atime << endl;*/
 	sort(players.begin(), players.end(), cmp);
-	/*for (int i = 0; i < players.size(); i++)
-		cout << players[i].atime << endl;*/
 	cin >> k >> m;
 	for (int i = 0; i < m; i++)
 	{
@@ -55,54 +79,61 @@ int main()
 		scanf("%d", &index);
 		tables[index - 1].isVip = true;
 	}
+
 	vector<Player> served;
-	for (int i = 0; i < n; i++)
+	int pos = 0;
+	while (pos < pcount)
 	{
-		int min = 21 * 3600 + 1, minI = 0;
-		bool isvip = false;
-		for (int j = 0; j < k; j++)
+		int minT = 21 * 3600, minI = -1;
+		for (int i = 0; i < k; i++)
 		{
-			if (tables[j].time < min || (!isvip && tables[j].time == min && tables[j].isVip))
+			if (tables[i].time < minT)
 			{
-				min = tables[j].time;
-				minI = j;
-				isvip = tables[j].isVip;
+				minT = tables[i].time;
+				minI = i;
 			}
 		}
-		if (tables[minI].time > 21 * 3600) break;
-		if ((vpos < vplayers.size()) && 
-			((isvip && vplayers[vpos].atime <= tables[minI].time && players[vpos].atime <= tables[minI].time) ||
-			(vplayers[vpos].atime <= players[vpos].atime) ||
-			pos >= players.size()))
+		if (minI < 0) break;
+
+		// vip用户为什么要用最小编号的vip桌位，不是应该用最小编号的桌位吗 
+		// "For any pair of players, if there are some tables open when they arrive, 
+		// they will be assigned to the available table with the smallest number."
+
+		int minVI = -1;
+		for (int i = 0; i < k; i++)
 		{
-			vplayers[vpos].stime = max(tables[minI].time, vplayers[vpos].atime);
-			if (vplayers[vpos].p > 2 * 3600)
-				tables[minI].time = vplayers[vpos].stime + 2 * 3600;
-			else
-				tables[minI].time = vplayers[vpos].stime + vplayers[vpos].p;
-			served.push_back(vplayers[vpos++]);
+			if (tables[i].isVip && tables[i].time == minT)
+			{
+				minVI = i; break;
+			}
 		}
+
+		int index = findPos(pos, minI, minT);
+		if (players[index].vip && minVI >= 0)
+			minI = minVI;
+
+		if (tables[minI].time < players[index].atime)
+			players[index].stime = players[index].atime;
 		else
-		{
-			players[pos].stime = max(tables[minI].time, players[pos].atime);
-			if (players[pos].p > 2 * 3600)
-				tables[minI].time = players[pos].stime + 2 * 3600;
-			else
-				tables[minI].time = players[pos].stime + players[pos].p;
-			served.push_back(players[pos++]);
-		}
+			players[index].stime = tables[minI].time;
+		tables[minI].time = players[index].stime + players[index].cost;
 		tables[minI].sum++;
+		served.push_back(players[index]);
+		isServed[index] = true;
+		while (pos < pcount && isServed[pos]) pos++;
 	}
+
+	sort(served.begin(), served.end(), cmp_s);
 	int size = served.size();
 	for (int i = 0; i < size; i++)
 	{
 		int ah = served[i].atime / 3600,
-			am = (served[i].atime - ah * 3600) / 60,
+			am = (served[i].atime % 3600) / 60,
 			as = served[i].atime % 60,
 			sh = served[i].stime / 3600,
-			sm = (served[i].stime - sh * 3600) / 60,
+			sm = (served[i].stime % 3600) / 60,
 			ss = served[i].stime % 60;
-		printf("%02d:%02d:%02d %02d:%02d:%02d %d\n", ah, am, as, sh, sm, ss, (served[i].stime - served[i].atime) / 60);
+		printf("%02d:%02d:%02d %02d:%02d:%02d %d\n", ah, am, as, sh, sm, ss, (served[i].stime - served[i].atime + 30) / 60);
 	}
 	for (int i = 0; i < k; i++)
 	{
