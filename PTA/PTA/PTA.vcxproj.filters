@@ -22,6 +22,9 @@
     <Filter Include="源文件\Advanced\31-60">
       <UniqueIdentifier>{63b0fb77-4f6a-400e-913b-29983fdaaeb8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\测试">
+      <UniqueIdentifier>{7b1ce322-a88e-42cd-af96-0c69de04c8e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -156,6 +159,48 @@
       <Filter>源文件\Advanced\31-60</Filter>
     </ClCompile>
     <ClCompile Include="A1038.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1039.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1040.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1041.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1042.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1043.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1044.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1045.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1046.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1047.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="set_vector.cpp">
+      <Filter>源文件\测试</Filter>
+    </ClCompile>
+    <ClCompile Include="A1048.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1049.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1050.cpp">
+      <Filter>源文件\Advanced\31-60</Filter>
+    </ClCompile>
+    <ClCompile Include="A1051.cpp">
       <Filter>源文件\Advanced\31-60</Filter>
     </ClCompile>
   </ItemGroup>
